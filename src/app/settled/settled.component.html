@@ -1,0 +1,26 @@
+<h2>Settled Customers</h2>
+<div *ngFor="let x of data; let i=index">
+    <h3>Customer - {{x.Customer}}</h3>
+    <h4 class="win-percent" [class.risky]="x.Risky">Win Percent - {{x.winPercent}}%</h4>
+    <table>
+        <thead>
+            <tr>
+                <th class="serial">Sr. No.</th>
+                <th class="event">Event</th>
+                <th class="participant">Participant</th>
+                <th class="stake">Stake</th>
+                <th class="win">Win</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let y of x.Data; let j=index">
+                <th class="serial">{{j+1}}</th>
+                <td class="event">{{y.Event}}</td>
+                <td class="participant">{{y.Participant}}</td>
+                <td class="stake">{{y.Stake}}</td>
+                <td class="win">{{y.Win}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+</div>

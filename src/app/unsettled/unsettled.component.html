@@ -1,0 +1,23 @@
+<h2>Unsettled Customers</h2>
+<table>
+    <thead>
+        <tr>
+            <th class="serial">Sr. No.</th>
+            <th class="customer">Customer</th>
+            <th class="event">Event</th>
+            <th class="participant">Participant</th>
+            <th class="stake">Stake</th>
+            <th class="win">To Win</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let y of data; let j=index" [class.risky]="y.status=='Risky'">
+            <th class="serial">{{j+1}}</th>
+            <td class="customer">{{y.Customer}}</td>
+            <td class="event">{{y.Event}}</td>
+            <td class="participant">{{y.Participant}}</td>
+            <td class="stake">{{y.Stake}}</td>
+            <td class="win">{{y['To Win']}}</td>
+        </tr>
+    </tbody>
+</table>
